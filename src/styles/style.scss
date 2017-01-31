@@ -1,0 +1,26 @@
+//ファイルのインポート
+@import "lib/base";
+@import "lib/layout";
+@import "lib/mixins";
+
+
+body {
+	background-color: #fff;
+	font-family: mc-l;
+	font-size: 18px;
+}
+#container {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	height: 100vh;
+	background-color: red;
+}
+#target {
+	background-color: #888;
+	height: 100vh;
+}
+#target2 {
+	background-color: blue;
+	height: 100vh;
+}
