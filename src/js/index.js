@@ -10,9 +10,14 @@ let txts = [];
 txts = document.getElementsByClassName('txt');
 console.log(txts);
 
+let txtshow = TweenMax.staggerTo(txts, 2, {opacity:1}, 0.5);
 let tween = TweenMax.fromTo("#rect", 1, {opacity: 0}, {opacity: 1}); //ターゲット、秒数?
 
 let scene = new ScrollMagic.Scene({triggerElement: "#target", duration: 2000, triggerHook: 'onLeave' })
 	.setPin("#target")
 	.setTween(tween)
 	.addTo(controller);
+let scene2 = new ScrollMagic.Scene({triggerElement: '#container', duration: 10000, triggerHook: 'onLeave'})
+	.setPin('#container')
+	.setTween(txtshow)
+	.addTo(controller)

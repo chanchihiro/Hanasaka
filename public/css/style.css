@@ -88,7 +88,9 @@ body {
     font-size: 3rem; }
   #container .txt {
     line-height: 2;
-    display: inline-block; }
+    display: inline-block;
+    height: 100%;
+    opacity: 0; }
 
 #target {
   background-color: #888;
