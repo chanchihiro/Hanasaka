@@ -6,6 +6,9 @@ import setTween from './components/animation.js' //ルート./は絶対いるよ
 console.log('start'); //スタート
 
 let controller = new ScrollMagic.Controller();
+let txts = [];
+txts = document.getElementsByClassName('txt');
+console.log(txts);
 
 let tween = TweenMax.fromTo("#rect", 1, {opacity: 0}, {opacity: 1}); //ターゲット、秒数?
 
