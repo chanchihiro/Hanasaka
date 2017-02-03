@@ -46,6 +46,7 @@ gulp.task("build", function(){
 
 gulp.task("server",function(){
 	browser({
+		port: 8888,
 		server:{
 			baseDir:"./public"
 		}
