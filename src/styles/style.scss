@@ -15,14 +15,19 @@ body {
 	height: 100vh;
 	box-sizing: border-box;
 	writing-mode: vertical-rl;
+	position: relative;
 	h1{
 		font-size: 3rem;
 	}
-	.txt{
-		line-height: 2;
-		display: inline-block;
-		height: 100%;
-		opacity: 0;
+	p{
+		position: absolute;
+		right: 700px;
+		.txt{
+			line-height: 2;
+			display: inline-block;
+			height: 100%;
+			opacity: 0;
+		}
 	}
 }
 #target {
@@ -41,8 +46,4 @@ body {
 		margin: auto;
 		background-color: #000;
 	}
-}
-#target2 {
-	background-color: blue;
-	height: 100vh;
 }

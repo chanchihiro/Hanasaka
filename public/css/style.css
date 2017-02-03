@@ -83,14 +83,18 @@ body {
   box-sizing: border-box;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl; }
+          writing-mode: vertical-rl;
+  position: relative; }
   #container h1 {
     font-size: 3rem; }
-  #container .txt {
-    line-height: 2;
-    display: inline-block;
-    height: 100%;
-    opacity: 0; }
+  #container p {
+    position: absolute;
+    right: 700px; }
+    #container p .txt {
+      line-height: 2;
+      display: inline-block;
+      height: 100%;
+      opacity: 0; }
 
 #target {
   background-color: #888;
@@ -107,7 +111,3 @@ body {
     bottom: 0;
     margin: auto;
     background-color: #000; }
-
-#target2 {
-  background-color: blue;
-  height: 100vh; }
