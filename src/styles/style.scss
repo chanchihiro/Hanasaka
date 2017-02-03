@@ -12,9 +12,23 @@ body {
 #container {
 	width: 100%;
 	margin: 0 auto;
-	text-align: center;
 	height: 100vh;
-	background-color: red;
+	box-sizing: border-box;
+	writing-mode: vertical-rl;
+	position: relative;
+	h1{
+		font-size: 3rem;
+	}
+	p{
+		position: absolute;
+		right: 700px;
+		.txt{
+			line-height: 2;
+			display: inline-block;
+			height: 100%;
+			opacity: 0;
+		}
+	}
 }
 #target {
 	background-color: #888;
@@ -32,8 +46,4 @@ body {
 		margin: auto;
 		background-color: #000;
 	}
-}
-#target2 {
-	background-color: blue;
-	height: 100vh;
 }
