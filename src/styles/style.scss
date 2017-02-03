@@ -12,9 +12,11 @@ body {
 #container {
 	width: 100%;
 	margin: 0 auto;
-	text-align: center;
 	height: 100vh;
-	background-color: red;
+	box-sizing: border-box;
+	h1{
+		text-align: center;
+	}
 }
 #target {
 	background-color: #888;
