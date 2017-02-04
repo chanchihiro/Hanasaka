@@ -21204,14 +21204,8 @@ var txts = [];
 txts = document.getElementsByClassName('txt');
 console.log(txts);
 
-var txtshow = _gsap.TweenMax.staggerTo(txts, 2, { opacity: 1 }, 0.5);
-var tween = _gsap.TweenMax.fromTo("#rect", 1, { opacity: 0 }, { opacity: 1 }); //ターゲット、秒数?
-// let movep = TweenMax.to('#hanasaka', 2, {right: -200},5);
+var txtshow = _gsap.TweenMax.staggerTo(txts, 30, { opacity: 1 }, 10); //対象,かかる時間,
 
-var scene = new _scrollmagic2.default.Scene({ triggerElement: "#target", duration: 2000, triggerHook: 'onLeave' }).setPin("#target").setTween(tween).addTo(controller);
-var scene2 = new _scrollmagic2.default.Scene({ triggerElement: '#container', duration: 8000, triggerHook: 'onLeave' }).setPin('#container').setTween(txtshow).addTo(controller);
-// let scene3 = new ScrollMagic.Scene({triggerElement: '#container', duration: 10000, triggerHook: 'onLeave'})
-// 	.setPin('#container')
-// 	.addTo(controller);
+var scene2 = new _scrollmagic2.default.Scene({ triggerElement: '#story', duration: 1000, triggerHook: 'onLeave' }).setTween(txtshow).setPin('#story').addTo(controller);
 
 },{"./components/animation.js":4,"gsap":1,"jquery":2,"scrollmagic":3}]},{},[5]);
