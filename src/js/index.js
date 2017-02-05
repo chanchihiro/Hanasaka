@@ -14,7 +14,7 @@ let hanasaka = document.getElementById('hanasaka');
 console.log(hanasaka);
 
 let txtshow = TweenMax.staggerTo(txts, 100, {opacity:1, transform:'matrix(1,0,0,1,0,0)'}, 20); //対象,かかる時間,
-let txtmove = TweenMax.staggerTo(hanasaka, 30, {right: "-200%"}, 100);
+let txtmove = TweenMax.to(hanasaka, 30, {right: "-200%"}, 100);
 
 // let scene = new ScrollMagic.Scene({
 // 	triggerElement: '#story', 
@@ -33,7 +33,7 @@ let scene2 = new ScrollMagic.Scene({
 	.setTween(txtmove)
 	.setPin('#story')
 	.addTo(controller)
-	.addIndicators({name: 'first'});
+	.addIndicators({name: 'hanasaka'});
 
 // $.each(txts, function(i, text) {
 // 	new ScrollMagic.Scene({
