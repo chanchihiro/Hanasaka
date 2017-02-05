@@ -9,10 +9,29 @@ let controller = new ScrollMagic.Controller();
 let txts = [];
 txts = document.getElementsByClassName('txt');
 console.log(txts);
+let hanasaka = document.getElementById('hanasaka');
 
-let txtshow = TweenMax.staggerTo(txts, 30, {opacity:1}, 10); //対象,かかる時間,
+let txtshow = TweenMax.staggerTo(txts, 100, {opacity:1, transform:'matrix()'}, 20); //対象,かかる時間,
+let txtmove = TweenMax.staggerTo(hanasaka, 30, {right: "-200%"}, 100);
 
-let scene2 = new ScrollMagic.Scene({triggerElement: '#story', duration: 1000, triggerHook: 'onLeave'})
+let scene = new ScrollMagic.Scene({
+	triggerElement: '#story', 
+	duration: 30000, 
+	triggerHook: 'onLeave'
+	})
 	.setTween(txtshow)
 	.setPin('#story')
 	.addTo(controller);
+
+$.each(txts, function(i, text) {
+	new ScrollMagic.Scene({
+		triggerElement: text,
+		duration: $(text).width() * 2,
+		offset: $(text).width() * (-2)
+	})
+	.setTween(TweenMax.fromTo( text, 1, 
+		{css: {x: $(text).width()}},
+		{css: {x: 0}}
+	))
+	.addTo(controller);
+});

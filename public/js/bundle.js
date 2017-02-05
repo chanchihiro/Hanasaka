@@ -21203,9 +21203,23 @@ var controller = new _scrollmagic2.default.Controller();
 var txts = [];
 txts = document.getElementsByClassName('txt');
 console.log(txts);
+var hanasaka = document.getElementById('hanasaka');
 
-var txtshow = _gsap.TweenMax.staggerTo(txts, 30, { opacity: 1 }, 10); //対象,かかる時間,
+var txtshow = _gsap.TweenMax.staggerTo(txts, 100, { opacity: 1, transform: 'matrix()' }, 20); //対象,かかる時間,
+var txtmove = _gsap.TweenMax.staggerTo(hanasaka, 30, { right: "-200%" }, 100);
 
-var scene2 = new _scrollmagic2.default.Scene({ triggerElement: '#story', duration: 1000, triggerHook: 'onLeave' }).setTween(txtshow).setPin('#story').addTo(controller);
+var scene = new _scrollmagic2.default.Scene({
+	triggerElement: '#story',
+	duration: 30000,
+	triggerHook: 'onLeave'
+}).setTween(txtshow).setPin('#story').addTo(controller);
+
+_jquery2.default.each(txts, function (i, text) {
+	new _scrollmagic2.default.Scene({
+		triggerElement: text,
+		duration: (0, _jquery2.default)(text).width() * 2,
+		offset: (0, _jquery2.default)(text).width() * -2
+	}).setTween(_gsap.TweenMax.fromTo(text, 1, { css: { x: (0, _jquery2.default)(text).width() } }, { css: { x: 0 } })).addTo(controller);
+});
 
 },{"./components/animation.js":4,"gsap":1,"jquery":2,"scrollmagic":3}]},{},[5]);

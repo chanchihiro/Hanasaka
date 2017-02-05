@@ -16,24 +16,33 @@ body {
 	box-sizing: border-box;
 	position: absolute;
 	top: 0;
+	h1 {
+		font-size: 5rem;
+		font-family: mc-r;
+		letter-spacing: 0.7rem;
+		text-align: center;
+		line-height: 100vh;
+		color: #fff;
+	}
 }
 #story {
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
 	box-sizing: border-box;
 	writing-mode: vertical-rl;
 	background-color: #fff;
 	position: absolute;
 	top: 100vh;
-	h1{
-		font-size: 3rem;
-	}
 	p{
+		position: absolute;
+		right: 30%;
 		.txt{
 			line-height: 2;
 			display: inline-block;
 			height: 100%;
 			opacity: 0;
+			transform: matrix(1,-0.2,0,0.99,0,0.5);
 		}
 	}
 }
@@ -43,5 +52,5 @@ body {
 	background-color: #000;
 	position: absolute;
 	background-color: #888;
-	top: 345vh; //ここを上の高さを合わせた数値にする。jsを使う。
+	top: 10000vh; //ここを上の高さを合わせた数値にする。jsを使う。
 }
