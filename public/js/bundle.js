@@ -21876,23 +21876,20 @@ console.log(txts);
 var hanasaka = document.getElementById('hanasaka');
 console.log(hanasaka);
 
-var txtshow = _gsap.TweenMax.staggerTo(txts, 100, { opacity: 1, transform: 'matrix(1,0,0,1,0,0)' }, 20); //対象,かかる時間,
+var txtshow = _gsap.TweenMax.staggerTo(txts, 50, { opacity: 1, transform: 'matrix(1,0,0,1,0,0)' }, 20); //対象,かかる時間,
 var txtmove = _gsap.TweenMax.to(hanasaka, 30, { right: "-200%" }, 100);
 
-// let scene = new ScrollMagic.Scene({
-// 	triggerElement: '#story', 
-// 	duration: 30000, 
-// 	triggerHook: 'onLeave'
-// 	})
-// 	.setTween(txtshow)
-// 	.setPin('#story')
-// 	.addTo(controller);
+var scene = new _scrollmagic2.default.Scene({
+	triggerElement: '#story',
+	duration: 40000,
+	triggerHook: 'onLeave'
+}).setTween(txtshow).addTo(controller).addIndicators({ name: 'txtshow' });
 
 var scene2 = new _scrollmagic2.default.Scene({
 	triggerElement: '#story',
-	duration: 30000,
+	duration: 130000,
 	triggerHook: 'onLeave'
-}).setTween(txtmove).setPin('#story').addTo(controller).addIndicators({ name: 'hanasaka' });
+}).setTween(txtmove).setPin('#story').addTo(controller).addIndicators({ name: 'txtmove' });
 
 // $.each(txts, function(i, text) {
 // 	new ScrollMagic.Scene({
