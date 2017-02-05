@@ -131,14 +131,14 @@ body {
   background-color: #fff;
   position: absolute;
   top: 100vh; }
-  #story p {
+  #story #hanasaka {
     position: absolute;
     right: 30%; }
-    #story p .txt {
+    #story #hanasaka .txt {
       line-height: 2;
       display: inline-block;
       height: 100%;
-      opacity: 0;
+      opacity: 1;
       -webkit-transform: matrix(1, -0.2, 0, 0.99, 0, 0.5);
               transform: matrix(1, -0.2, 0, 0.99, 0, 0.5); }
 

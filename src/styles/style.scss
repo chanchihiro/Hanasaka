@@ -34,14 +34,14 @@ body {
 	background-color: #fff;
 	position: absolute;
 	top: 100vh;
-	p{
+	#hanasaka {
 		position: absolute;
 		right: 30%;
 		.txt{
 			line-height: 2;
 			display: inline-block;
 			height: 100%;
-			opacity: 0;
+			opacity: 1;
 			transform: matrix(1,-0.2,0,0.99,0,0.5);
 		}
 	}
