@@ -18,7 +18,7 @@ let txtmove = TweenMax.to(hanasaka, 30, {right: "-200%"}, 100);
 
 let scene = new ScrollMagic.Scene({
 	triggerElement: '#story', 
-	duration: 40000, 
+	duration: 80000, 
 	triggerHook: 'onLeave'
 	})
 	.setTween(txtshow)
@@ -27,7 +27,7 @@ let scene = new ScrollMagic.Scene({
 
 let scene2 = new ScrollMagic.Scene({
 	triggerElement: '#story',
-	duration: 130000,
+	duration: 708000,
 	triggerHook: 'onLeave'
 	})
 	.setTween(txtmove)
