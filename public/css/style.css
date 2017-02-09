@@ -129,11 +129,18 @@ body {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   background-color: #fff;
+  background-image: url("../img/house.jpg");
+  background-size: cover;
   position: absolute;
+  color: #fff;
   top: 100vh; }
   #story #hanasaka {
     position: absolute;
+<<<<<<< HEAD
     right: 105%; }
+=======
+    right: 80%; }
+>>>>>>> d49ef9371a0af3bfd3f34f70229640cd918b240b
     #story #hanasaka .txt {
       line-height: 2;
       display: inline-block;
@@ -149,3 +156,14 @@ body {
   position: absolute;
   background-color: #888;
   top: 10000vh; }
+
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: #e1a495; }
+  #about h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 8rem;
+    font-family: mc-m;
+    letter-spacing: 0.5rem; }

@@ -21881,13 +21881,17 @@ var txtmove = _gsap.TweenMax.to(hanasaka, 30, { right: "-200%" }, 100);
 
 var scene = new _scrollmagic2.default.Scene({
 	triggerElement: '#story',
-	duration: 40000,
+	duration: 80000,
 	triggerHook: 'onLeave'
 }).setTween(txtshow).addTo(controller).addIndicators({ name: 'txtshow' });
 
 var scene2 = new _scrollmagic2.default.Scene({
 	triggerElement: '#story',
+<<<<<<< HEAD
 	duration: 120000,
+=======
+	duration: 708000,
+>>>>>>> d49ef9371a0af3bfd3f34f70229640cd918b240b
 	triggerHook: 'onLeave'
 }).setTween(txtmove).setPin('#story').addTo(controller).addIndicators({ name: 'txtmove' });
 
