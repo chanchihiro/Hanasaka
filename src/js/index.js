@@ -27,7 +27,7 @@ let scene = new ScrollMagic.Scene({
 
 let scene2 = new ScrollMagic.Scene({
 	triggerElement: '#story',
-	duration: 708000,
+	duration: 208000,
 	triggerHook: 'onLeave'
 	})
 	.setTween(txtmove)

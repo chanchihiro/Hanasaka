@@ -21887,11 +21887,7 @@ var scene = new _scrollmagic2.default.Scene({
 
 var scene2 = new _scrollmagic2.default.Scene({
 	triggerElement: '#story',
-<<<<<<< HEAD
-	duration: 120000,
-=======
-	duration: 708000,
->>>>>>> d49ef9371a0af3bfd3f34f70229640cd918b240b
+	duration: 208000,
 	triggerHook: 'onLeave'
 }).setTween(txtmove).setPin('#story').addTo(controller).addIndicators({ name: 'txtmove' });
 
