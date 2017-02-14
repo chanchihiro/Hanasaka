@@ -2,12 +2,16 @@
 @import "lib/base";
 @import "lib/layout";
 @import "lib/mixins";
-
+@import 'lib/import';
+@import 'breakpoint';
 
 body {
 	background-color: #fff;
 	font-family: mc-l;
 	font-size: 18px;
+	@include breakpoint(700px) {
+		background-color: red; 
+	}
 }
 #title {
 	width: 100%;
